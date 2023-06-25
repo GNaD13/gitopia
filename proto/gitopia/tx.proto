@@ -108,6 +108,7 @@ service Msg {
   // rpc TransferUser(MsgTransferUser) returns (MsgTransferUserResponse);
   rpc UpdateRepositoryBackupRef(MsgUpdateRepositoryBackupRef) returns (MsgUpdateRepositoryBackupRefResponse);
   rpc AddRepositoryBackupRef(MsgAddRepositoryBackupRef) returns (MsgAddRepositoryBackupRefResponse);
+  rpc AddReactionToComment(MsgAddReactionToComment) returns (MsgAddReactionToCommentResponse);
 }
 
 message MsgExercise {
@@ -906,6 +907,12 @@ message MsgDeleteUser {
 }
 
 message MsgDeleteUserResponse { }
+
+message MsgAddReactionToComment {
+  string creator = 1;
+}
+
+message MsgAddReactionToCommentResponse {}
 
 // message MsgTransferUser {
 //   string creator = 1;
